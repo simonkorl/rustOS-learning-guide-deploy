@@ -1,0 +1,657 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ex8: array 与 slice · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ex9/ex9.html" />
+    
+    
+    <link rel="prev" href="../ex7/ex7.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    R:Z 从零开始的RustOS编写体验指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../docs/introduction/what-is-this.html">
+            
+                <a href="../../docs/introduction/what-is-this.html">
+            
+                    
+                    这个指南是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../docs/introduction/from_one.html">
+            
+                <a href="../../docs/introduction/from_one.html">
+            
+                    
+                    从一开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../docs/introduction/goodbye-windows.html">
+            
+                <a href="../../docs/introduction/goodbye-windows.html">
+            
+                    
+                    Goodbye Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../docs/introduction/tools.html">
+            
+                <a href="../../docs/introduction/tools.html">
+            
+                    
+                    编程工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Rust Jumpstart</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../docs/rust-jumpstart/what-is-this.html">
+            
+                <a href="../../docs/rust-jumpstart/what-is-this.html">
+            
+                    
+                    这是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../docs/rust-jumpstart/environment.html">
+            
+                <a href="../../docs/rust-jumpstart/environment.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">rCore 之旅</li>
+        
+        
+    
+
+    
+        
+        <li class="header">代码之前</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ex1/ex1.html">
+            
+                <a href="../ex1/ex1.html">
+            
+                    
+                    ex1: Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ex2/ex2.html">
+            
+                <a href="../ex2/ex2.html">
+            
+                    
+                    ex2: Cargo 搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../ex3/ex3.html">
+            
+                <a href="../ex3/ex3.html">
+            
+                    
+                    ex3: 注释有四种写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../ex4/ex4.md">
+            
+                <span>
+            
+                    
+                    ex4: 打印与参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基本概念</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../ex5/ex5.html">
+            
+                <a href="../ex5/ex5.html">
+            
+                    
+                    ex5: 标量 (Primitives —— Scalar Types)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../ex6/ex6.html">
+            
+                <a href="../ex6/ex6.html">
+            
+                    
+                    ex6: 字面量 (Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../ex7/ex7.html">
+            
+                <a href="../ex7/ex7.html">
+            
+                    
+                    ex7: tuple
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.4" data-path="ex8.html">
+            
+                <a href="ex8.html">
+            
+                    
+                    ex8: array 与 slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../ex9/ex9.html">
+            
+                <a href="../ex9/ex9.html">
+            
+                    
+                    ex9: struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../ex10/ex10.html">
+            
+                <a href="../ex10/ex10.html">
+            
+                    
+                    ex10: enum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../ex11/ex11.html">
+            
+                <a href="../ex11/ex11.html">
+            
+                    
+                    ex11: 打印与 Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语法特性</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../ex12/ex12.md">
+            
+                <span>
+            
+                    
+                    ex12: 变量绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../ex13/ex13.md">
+            
+                <span>
+            
+                    
+                    ex13: Statement 与 Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">附录</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../docs/rcore_journey/Lab_Q&A.html">
+            
+                <a href="../../docs/rcore_journey/Lab_Q&A.html">
+            
+                    
+                    Lab Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../docs/rcore_journey/reference.html">
+            
+                <a href="../../docs/rcore_journey/reference.html">
+            
+                    
+                    汇流成河
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >ex8: array 与 slice</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ex8-array-and-slices">ex8: array and slices</h1>
+<h2 id="&#x6570;&#x7EC4;array">&#x6570;&#x7EC4;(array)</h2>
+<p>&#x6570;&#x7EC4;(array)&#x7684;&#x6982;&#x5FF5;&#x57FA;&#x672C;&#x4E0A;&#x5728;&#x6240;&#x6709;&#x7684;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x4E2D;&#x90FD;&#x5B58;&#x5728;&#xFF0C;&#x5176;&#x4EE3;&#x8868;&#x7684;&#x542B;&#x4E49;&#x662F;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x4E8E;&#x50A8;&#x5B58;&#x4EFB;&#x610F;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;&#x4E0D;&#x8FC7;&#x6570;&#x7EC4;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x5426;&#x5FC5;&#x987B;&#x4E00;&#x81F4;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x5426;&#x56FA;&#x5B9A;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x6839;&#x636E;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x4E0D;&#x540C;&#x4F1A;&#x6709;&#x6240;&#x533A;&#x522B;&#x3002;</p>
+<p>Rust &#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x8981;&#x6C42;&#x5F88;&#x9AD8;&#xFF1A;</p>
+<ol>
+<li>&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x76F8;&#x540C;</li>
+<li>&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x5FC5;&#x987B;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x786E;&#x5B9A;</li>
+</ol>
+<p>unsafe {
+    &#x8FD9;&#x5BFC;&#x81F4;&#x4E86; Rust &#x4E0D;&#x80FD;&#x50CF; C &#x548C; C++ &#x90A3;&#x6837;&#x52A8;&#x6001;&#x5730;&#x5206;&#x914D;&#x6570;&#x7EC4;*&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x660E;&#x786E;&#x7ED9;&#x51FA;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x80FD;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; Vector &#x6765;&#x50A8;&#x5B58;&#x6570;&#x636E;&#x3002;&#xFF08;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x4F1A;&#x63D0;&#x5230;&#xFF09;
+}
+*&#x8FD9;&#x53E5;&#x8BDD;&#x4ECE;&#x5B57;&#x9762;&#x610F;&#x4E49;&#x4E0A;&#x7406;&#x89E3;&#x53EF;&#x80FD;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF1A;&#x4F60;&#x5F53;&#x7136;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x5730;&#x5728;&#x5806;&#x4E0A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4F46;&#x662F;&#x5C31;&#x7B97;&#x5982;&#x6B64;&#x4F60;&#x4E5F;&#x5FC5;&#x987B;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x660E;&#x786E;&#x7ED9;&#x51FA;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x786E;&#x5B9E;&#x6709;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;<code>vec![0; length]</code>&#x7684;&#x8BED;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Vector <sup>[1]</sup></p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x4E3A;&#x4E86;&#x6DF1;&#x5165;&#x7406;&#x89E3;&#x6570;&#x7EC4;&#x7684;&#x542B;&#x4E49;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x660E;&#x767D;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x5404;&#x4E2A;&#x6570;&#x636E;&#x7684;&#x50A8;&#x5B58;&#x4F4D;&#x7F6E;&#x4EE5;&#x53CA;&#x50A8;&#x5B58;&#x65B9;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E; C &#x548C; C++ &#x7684;&#x6570;&#x7EC4;&#x800C;&#x8A00;&#xFF0C;&#x5176;&#x53EA;&#x9700;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x5B83;&#xFF1A;&#x6570;&#x7EC4;&#x7684;&#x8D77;&#x59CB;&#x5730;&#x5740;&#xFF0C;&#x4E4B;&#x540E;&#x4F60;&#x8BBF;&#x95EE;&#x7684;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x548C;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x7D22;&#x5F15;&#x51FA;&#x6765;&#x7684;&#x2014;&#x2014;&#x8FD9;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x6570;&#x7EC4;&#x8D8A;&#x754C;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x4EE4;&#x4EBA;&#x5934;&#x75BC;&#x7684; Segment Fault&#x3002;</p>
+<p>&#x800C;&#x5728; Rust &#x4E2D;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x540C;&#x6837;&#x4E5F;&#x88AB;&#x50A8;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x6570;&#x7EC4;&#x88AB;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x8D8A;&#x754C;&#xFF08;&#x9664;&#x975E;&#x4F60;&#x504F;&#x8981;&#x8FD9;&#x4E48;&#x505A;&#xFF09;&#x3002;&#x5728; Rust &#x4E2D;&#xFF0C;&#x6570;&#x7EC4;&#x7684;&#x6574;&#x4F53;&#x5927;&#x5C0F;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x80FD;&#x50A8;&#x5B58;&#x5728;&#x6808;&#x4E0A;&#x3002;</p>
+<h2 id="&#x5207;&#x7247;slice">&#x5207;&#x7247;(slice)</h2>
+<p>unsafe {
+    &#x5207;&#x7247;(slice)&#x7684;&#x6982;&#x5FF5;&#x5728;&#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x4E2D;&#x4E5F;&#x6709;&#x51FA;&#x73B0;*&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x5207;&#x7247;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;&#x8D77;&#x59CB;&#x5730;&#x5740;&#x4EE5;&#x53CA;&#x957F;&#x5EA6;&#x3002;&#x4ECE;&#x8FD9;&#x4E2A;&#x89D2;&#x5EA6;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x50A8;&#x5B58;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x6570;&#x7EC4;&#x5F15;&#x7528;&#x76F8;&#x540C;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#x5176;&#x4E0D;&#x5B9E;&#x9645;&#x50A8;&#x5B58;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x662F;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x7684;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x3002;
+}</p>
+<p>*&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5207;&#x7247;&#x7684;&#xFF0C;&#x4E5F;&#x8BB8;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x4E00;&#x79CD;&#x5B57;&#x7B26;&#x6570;&#x7EC4;&#x3002;&#x81F3;&#x4E8E;&#x5207;&#x7247;&#x662F;&#x5426;&#x80AF;&#x5B9A;&#x4E0D;&#x5B58;&#x50A8;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x8FD8;&#x9700;&#x8981;&#x518D;&#x8FDB;&#x884C;&#x4E86;&#x89E3;&#x3002;</p>
+<p>&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x4E0D;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x6CA1;&#x529E;&#x6CD5;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x786E;&#x8BA4;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x3002;Rust &#x79F0;&#x8FD9;&#x79CD;&#x6CA1;&#x529E;&#x6CD5;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x5F97;&#x77E5;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E3A; DST (dynamically sized type)&#xFF0C;Rust &#x89C4;&#x5B9A; DST &#x4E0D;&#x80FD;&#x51FA;&#x73B0;&#x5728;&#x6808;&#x4E0A;&#xFF08;&#x4ECE;&#x67D0;&#x79CD;&#x89D2;&#x5EA6;&#x4E0A;&#x6765;&#x8BF4;&#x5B83;&#x4EEC;&#x4E0D;&#x80FD;&#x88AB;&#x76F4;&#x63A5;&#x7ED1;&#x5B9A;&#x5728;&#x53D8;&#x91CF;&#x4E0A;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#x6BD4;&#x5982; str&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF09;&#x4E0E; slice&#xFF08;&#x5207;&#x7247;&#xFF09;&#x90FD;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x201C;&#x5F15;&#x7528;&#x201D;&#x7684;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x81F3;&#x4E8E;&#x201C;&#x5F15;&#x7528;&#x201D;&#x7684;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x53EF;&#x4EE5;&#x53C2;&#x8003; C &#x4E0E; C++ &#x7684;&#x6307;&#x9488;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E4B;&#x540E;&#x4F1A;&#x66F4;&#x52A0;&#x6DF1;&#x5165;&#x5730;&#x8BB2;&#x89E3;&#x3002;&#x76EE;&#x524D;&#x53EF;&#x4EE5;&#x5148;&#x4F7F;&#x7528;&#x201C;&#x6307;&#x9488;&#x201D;&#x7684;&#x6982;&#x5FF5;&#x8FDB;&#x884C;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h2>
+<pre><code class="lang-rust"><span class="hljs-comment">// #1</span>
+<span class="hljs-comment">// &#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5207;&#x7247;&#x7684;&#x7C7B;&#x578B;&#x5C31;&#x53EF;&#x4EE5;</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">analyze_slice</span></span>(slice: &amp;[<span class="hljs-keyword">i32</span>]) {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The whole slice: {:?}&quot;</span>, slice);
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;The length of this slice: {}&quot;</span>, slice.len());
+}
+<span class="hljs-comment">// &#x5982;&#x679C;&#x6709;&#x82E5;&#x5E72;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x4ECE; main &#x51FD;&#x6570;&#x5F00;&#x59CB;&#x8FD0;&#x884C;</span>
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-comment">// &#x6570;&#x7EC4;&#xFF1A;&#x5177;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x6808;&#x4E0A;</span>
+    <span class="hljs-keyword">let</span> array: [<span class="hljs-keyword">i32</span>; <span class="hljs-number">5</span>] = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+    <span class="hljs-keyword">let</span> n_array: [<span class="hljs-keyword">i32</span>; <span class="hljs-number">10</span>]; <span class="hljs-comment">// &#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x7A0D;&#x540E;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4E0D;&#x8FC7;&#x6781;&#x4E0D;&#x63A8;&#x8350;</span>
+    n_array = [<span class="hljs-number">0</span>; <span class="hljs-number">10</span>]; <span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x5168;&#x662F;&#x96F6;&#x7684;&#x5E8F;&#x5217;</span>
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x4E0B;&#x6807;&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x5143;&#x7D20;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;array[0]: {}&quot;</span>, array[<span class="hljs-number">0</span>]); <span class="hljs-comment">// &#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x4ECE; 0 &#x5F00;&#x59CB;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;array[4]: {}&quot;</span>, array[<span class="hljs-number">4</span>]); <span class="hljs-comment">// &#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4E0B;&#x6807;&#x662F;&#x957F;&#x5EA6; - 1</span>
+
+    <span class="hljs-comment">// `len`&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;array size: {}&quot;</span>, array.len());
+
+    <span class="hljs-comment">// &#x6253;&#x5370;&#x6570;&#x7EC4;&#xFF0C;&#x4F7F;&#x7528;{:?}</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;n_array: {:?}&quot;</span>, n_array);
+
+    <span class="hljs-comment">// &#x5207;&#x7247;&#xFF1A;&#x4E0D;&#x77E5;&#x9053;&#x6709;&#x591A;&#x5927;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x653E;&#x5728;&#x6808;&#x4E0A;</span>
+    <span class="hljs-comment">// &#x4E0B;&#x9762;&#x8FD9;&#x884C;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x6211;&#x4EEC;&#x66FF;&#x4F60;&#x6CE8;&#x91CA;&#x6389;&#x4E86;</span>
+    <span class="hljs-comment">// let slice: [i32] = array[0..2]; // [i32]&#x662F;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x957F;&#x5EA6;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x653E;&#x5728;&#x6808;&#x4E0A;</span>
+    <span class="hljs-comment">// 0..2&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x5DE6;&#x95ED;&#x53F3;&#x5F00; #2</span>
+    <span class="hljs-keyword">let</span> slice: &amp;[<span class="hljs-keyword">i32</span>] = &amp;array[<span class="hljs-number">0</span>..<span class="hljs-number">2</span>]; <span class="hljs-comment">// &amp;[i32]&#x5728;&#x6808;&#x4E0A;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5927;&#x5C0F;&#x4E3A;&#x4E24;&#x4E2A; usize</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;{:?}&quot;</span>, slice);
+
+    <span class="hljs-comment">// &#x6570;&#x7EC4;&#x6574;&#x4F53;&#x4E0A;&#x53EF;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x5207;&#x7247;</span>
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8F6C;&#x5316;&#x7684;&#x8BDD;&#xFF0C;&#x6570;&#x7EC4;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x88AB;&#x5F53;&#x4F5C;&#x5207;&#x7247;&#x8FDB;&#x884C;&#x201C;&#x501F;&#x7528;&#x201D;(borrow)</span>
+    <span class="hljs-comment">// &#x4E0B;&#x9762;&#x8FD9;&#x884C;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x66FF;&#x4F60;&#x6CE8;&#x91CA;&#x6389;&#x4E86;</span>
+    <span class="hljs-comment">// analyze_slice(array);</span>
+    analyze_slice(&amp;array); <span class="hljs-comment">// &#x5982;&#x679C;&#x60F3;&#x8981;&#x8FDB;&#x884C;&#x201C;&#x501F;&#x7528;&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x4F7F;&#x7528; &amp; &#x7B26;&#x53F7;&#x3002;&#x7EC6;&#x8282;&#x7559;&#x5230;&#x540E;&#x9762;</span>
+
+    <span class="hljs-comment">// &#x501F;&#x7528;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x5207;&#x7247;</span>
+    analyze_slice(&amp;array[<span class="hljs-number">0</span>..=<span class="hljs-number">3</span>]); <span class="hljs-comment">// 0..=3&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x4E24;&#x8FB9;&#x5747;&#x662F;&#x95ED;&#x533A;&#x95F4;</span>
+
+    <span class="hljs-comment">// &#x6570;&#x7EC4;&#x8BBF;&#x95EE;&#x4E0D;&#x5141;&#x8BB8;&#x8D8A;&#x754C;</span>
+    <span class="hljs-keyword">let</span> pos = <span class="hljs-number">5</span>; 
+    <span class="hljs-comment">// !error! &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x8BDD;&#x4E0D;&#x6B63;&#x786E;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;array[5]: {}&quot;</span>, array[pos]); <span class="hljs-comment">// &#x957F;&#x5EA6;&#x4E3A;5&#x7684;&#x6570;&#x7EC4;&#x80FD;&#x8BBF;&#x95EE;&#x7684;&#x6700;&#x5927;&#x4E0B;&#x6807;&#x4E3A;4</span>
+
+    <span class="hljs-comment">// &#x7F16;&#x8BD1;&#x5668;&#x6709;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5E2E;&#x4F60;&#x89E3;&#x51B3;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F60;&#x53EF;&#x4EE5;&#x7792;&#x8FC7;&#x53BB;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..<span class="hljs-number">6</span> { <span class="hljs-comment">//#3</span>
+        <span class="hljs-comment">// &#x7F16;&#x8BD1;&#x5668;&#x6CA1;&#x529E;&#x6CD5;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x7684;&#x95EE;&#x9898;</span>
+        <span class="hljs-comment">// &#x4E0D;&#x8FC7; Rust &#x5DF2;&#x7ECF;&#x60F3;&#x4E86;&#x529E;&#x6CD5;&#x963B;&#x6B62;&#x8D8A;&#x754C;&#x8BBF;&#x95EE;&#x5BFC;&#x81F4;&#x7684;&#x7ED3;&#x679C;</span>
+        <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;array[{}]: {}&quot;</span>, i, array[i]);
+    }
+}
+</code></pre>
+<h2 id="&#x4EE3;&#x7801;&#x8BF4;&#x660E;">&#x4EE3;&#x7801;&#x8BF4;&#x660E;</h2>
+<h3 id="1">#1</h3>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x6B21;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53C8;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x548C; main &#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;slice&#x3002;&#x5728; Rust &#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6807;&#x6CE8;&#xFF0C;&#x8FD9;&#x4E5F;&#x65B9;&#x4FBF;&#x7F16;&#x8BD1;&#x5668;&#x5224;&#x65AD;&#x4F60;&#x662F;&#x5426;&#x6B63;&#x786E;&#x5730;&#x4F7F;&#x7528;&#x4E86;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x51FD;&#x6570;&#x7684;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x540E;&#x9762;&#x7684;&#x7EC3;&#x4E60;&#x3002;</p>
+<h3 id="2">#2</h3>
+<p>&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x770B;&#x5230;&#x7684;<code>0..2</code>&#x548C;<code>0..=3</code>&#x7684;&#x5199;&#x6CD5;&#x89C4;&#x5B9A;&#x4E86;&#x4E00;&#x4E2A;&#x533A;&#x95F4;&#xFF0C;&#x5B83;&#x4EEC;&#x4E5F;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7C7B;&#x578B; Range&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x5177;&#x6709;&#x5F88;&#x591A;&#x529F;&#x80FD;&#x3002;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x53EA;&#x8981;&#x77E5;&#x9053;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8868;&#x793A;&#x533A;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;&#x7528;&#x6765;&#x5206;&#x9694;&#x6570;&#x7EC4;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h3 id="3">#3</h3>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x8BED;&#x53E5;&#x7684;&#x542B;&#x4E49;&#x662F;&#x4F7F;&#x7528;&#x4E0B;&#x6807; 0 &#x5230; 5 &#x5206;&#x522B;&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x5E76;&#x4E14;&#x8F93;&#x51FA;&#x3002;&#x8BED;&#x6CD5;&#x4E0A;&#x7684;&#x539F;&#x7406;&#x53EF;&#x4EE5;&#x5E76;&#x4E0D;&#x660E;&#x767D;&#xFF0C;&#x4F46;&#x662F;&#x529F;&#x80FD;&#x4E0A;&#x662F;&#x8FD9;&#x6837;&#x3002;&#x5177;&#x4F53;&#x7684;&#x7EC6;&#x8282;&#x6211;&#x4EEC;&#x4E4B;&#x540E;&#x4F1A;&#x8BB2;&#x5230;&#x3002;</p>
+<h2 id="&#x672C;&#x8282;&#x603B;&#x7ED3;">&#x672C;&#x8282;&#x603B;&#x7ED3;</h2>
+<p>&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x8BF4;&#x660E;&#x4E86;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B; array &#x4EE5;&#x53CA; slice&#x3002;&#x4ECE;&#x8FD9;&#x4E00;&#x8282;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x65E0;&#x6CD5;&#x907F;&#x514D;&#x5730;&#x63A5;&#x89E6;&#x5230; Rust &#x8BED;&#x8A00;&#x7684;&#x4E00;&#x4E9B;&#x8F83;&#x4E3A;&#x9AD8;&#x7EA7;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x611F;&#x89C9;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#xFF0C;&#x53EF;&#x4EE5;&#x6682;&#x65F6;&#x5FFD;&#x7565;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x5BF9;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x6240;&#x638C;&#x63E1;&#xFF1A;</p>
+<ol>
+<li>array &#x7684;&#x521B;&#x5EFA;&#x3001;&#x521D;&#x59CB;&#x5316;&#x3001;&#x5143;&#x7D20;&#x8BBF;&#x95EE;</li>
+<li>array &#x7684;&#x5927;&#x5C0F;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x8BBF;&#x95EE;&#x4E0D;&#x80FD;&#x51FA;&#x754C;</li>
+</ol>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x5BF9;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x6240;&#x4E86;&#x89E3;&#xFF1A;</p>
+<ol>
+<li>array &#x53EF;&#x4EE5;&#x653E;&#x5728;&#x6808;&#x4E0A;&#xFF0C;slice &#x4E0D;&#x884C;</li>
+<li>array &#x548C; slice &#x7684;&#x7C7B;&#x578B;&#x6807;&#x6CE8;</li>
+<li>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5229;&#x7528; slice &#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>&amp;</code>&#x8FDB;&#x884C;&#x501F;&#x7528;</li>
+<li>&#x5BF9;<code>for .. in ..</code>&#x5FAA;&#x73AF;&#x6709;&#x4E00;&#x4E2A;&#x5370;&#x8C61;</li>
+<li>&#x5BF9; main &#x51FD;&#x6570;&#x4EE5;&#x5916;&#x7684;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x6709;&#x4E00;&#x4E2A;&#x5370;&#x8C61;</li>
+</ol>
+<h2 id="&#x788E;&#x788E;&#x5FF5;">&#x788E;&#x788E;&#x5FF5;</h2>
+<p>&#x8FD9;&#x4E00;&#x8282;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x5F88;&#x96BE;&#x7406;&#x89E3;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x201C;&#x5F15;&#x7528;&#x201D;&#x3001;&#x201C;&#x501F;&#x7528;&#x201D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6709;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;&#x57FA;&#x7840;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x5229;&#x7528;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x7406;&#x89E3;&#x5B83;&#x4EEC;&#x3002;Rust &#x5728;&#x8FD9;&#x4E9B;&#x65B9;&#x9762;&#x786E;&#x5B9E;&#x975E;&#x5E38;&#x795E;&#x5947;&#xFF0C;&#x4F46;&#x662F;&#x4E8E;&#x6B64;&#x540C;&#x65F6;&#x7406;&#x89E3;&#x96BE;&#x5EA6;&#x4E5F;&#x4F1A;&#x52A0;&#x5927;&#x3002;&#x5982;&#x679C;&#x611F;&#x89C9;&#x7406;&#x89E3;&#x8D77;&#x6765;&#x6709;&#x4E00;&#x4E9B;&#x56F0;&#x96BE;&#xFF0C;&#x4E0D;&#x59A8;&#x5148;&#x628A;&#x201C;&#x7406;&#x89E3;&#x201D;&#x8FD9;&#x4EF6;&#x4E8B;&#x5148;&#x653E;&#x4E0B;&#xFF0C;&#x5F80;&#x540E;&#x770B;&#x4E00;&#x770B;&#xFF0C;&#x8BF4;&#x4E0D;&#x5B9A;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x660E;&#x767D;&#x4E86;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x770B; Rust By Example &#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x611F;&#x89C9;&#xFF0C;&#x5F88;&#x591A;&#x4E4B;&#x524D;&#x7684;&#x7AE0;&#x8282;&#x4F9D;&#x8D56;&#x4E86;&#x4E4B;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A; Rust &#x4E2D;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x7684;&#x6982;&#x5FF5;&#x5B9E;&#x5728;&#x662F;&#x8054;&#x7CFB;&#x592A;&#x7D27;&#x5BC6;&#x4E86;&#xFF0C;&#x5F88;&#x96BE;&#x628A;&#x5B83;&#x4EEC;&#x90FD;&#x5206;&#x5F00;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ul>
+<li>[1] <a href="https://stackoverflow.com/questions/34684261/how-to-set-a-rust-array-length-dynamically" target="_blank">How to set a Rust array length dynamically?</a></li>
+<li>[2] <a href="https://doc.rust-lang.org/rust-by-example/primitives/array.html" target="_blank">Rust By Example: Arrays and Slices</a></li>
+<li>[3] <a href="https://skyao.io/learning-rust/grammar/type/array.html" target="_blank">Rust &#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#xFF1A;&#x6570;&#x7EC4;&#x3001;&#x5143;&#x7EC4;&#x3001;&#x8303;&#x56F4;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ex7/ex7.html" class="navigation navigation-prev " aria-label="Previous page: ex7: tuple">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ex9/ex9.html" class="navigation navigation-next " aria-label="Next page: ex9: struct">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ex8: array 与 slice","level":"6.4","depth":1,"next":{"title":"ex9: struct","level":"6.5","depth":1,"path":"codes/ex9/ex9.md","ref":"codes/ex9/ex9.md","articles":[]},"previous":{"title":"ex7: tuple","level":"6.3","depth":1,"path":"codes/ex7/ex7.md","ref":"codes/ex7/ex7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"codes/ex8/ex8.md","mtime":"2020-11-03T06:12:06.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T06:12:50.527Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

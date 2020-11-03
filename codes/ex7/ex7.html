@@ -1,0 +1,638 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ex7: tuple · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ex8/ex8.html" />
+    
+    
+    <link rel="prev" href="../ex6/ex6.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    R:Z 从零开始的RustOS编写体验指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../docs/introduction/what-is-this.html">
+            
+                <a href="../../docs/introduction/what-is-this.html">
+            
+                    
+                    这个指南是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../docs/introduction/from_one.html">
+            
+                <a href="../../docs/introduction/from_one.html">
+            
+                    
+                    从一开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../docs/introduction/goodbye-windows.html">
+            
+                <a href="../../docs/introduction/goodbye-windows.html">
+            
+                    
+                    Goodbye Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../docs/introduction/tools.html">
+            
+                <a href="../../docs/introduction/tools.html">
+            
+                    
+                    编程工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Rust Jumpstart</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../docs/rust-jumpstart/what-is-this.html">
+            
+                <a href="../../docs/rust-jumpstart/what-is-this.html">
+            
+                    
+                    这是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../docs/rust-jumpstart/environment.html">
+            
+                <a href="../../docs/rust-jumpstart/environment.html">
+            
+                    
+                    环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">rCore 之旅</li>
+        
+        
+    
+
+    
+        
+        <li class="header">代码之前</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ex1/ex1.html">
+            
+                <a href="../ex1/ex1.html">
+            
+                    
+                    ex1: Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ex2/ex2.html">
+            
+                <a href="../ex2/ex2.html">
+            
+                    
+                    ex2: Cargo 搭建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../ex3/ex3.html">
+            
+                <a href="../ex3/ex3.html">
+            
+                    
+                    ex3: 注释有四种写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../ex4/ex4.md">
+            
+                <span>
+            
+                    
+                    ex4: 打印与参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基本概念</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../ex5/ex5.html">
+            
+                <a href="../ex5/ex5.html">
+            
+                    
+                    ex5: 标量 (Primitives —— Scalar Types)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../ex6/ex6.html">
+            
+                <a href="../ex6/ex6.html">
+            
+                    
+                    ex6: 字面量 (Literals)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3" data-path="ex7.html">
+            
+                <a href="ex7.html">
+            
+                    
+                    ex7: tuple
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../ex8/ex8.html">
+            
+                <a href="../ex8/ex8.html">
+            
+                    
+                    ex8: array 与 slice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../ex9/ex9.html">
+            
+                <a href="../ex9/ex9.html">
+            
+                    
+                    ex9: struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../ex10/ex10.html">
+            
+                <a href="../ex10/ex10.html">
+            
+                    
+                    ex10: enum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="../ex11/ex11.html">
+            
+                <a href="../ex11/ex11.html">
+            
+                    
+                    ex11: 打印与 Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语法特性</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../ex12/ex12.md">
+            
+                <span>
+            
+                    
+                    ex12: 变量绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../ex13/ex13.md">
+            
+                <span>
+            
+                    
+                    ex13: Statement 与 Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">附录</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../docs/rcore_journey/Lab_Q&A.html">
+            
+                <a href="../../docs/rcore_journey/Lab_Q&A.html">
+            
+                    
+                    Lab Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../docs/rcore_journey/reference.html">
+            
+                <a href="../../docs/rcore_journey/reference.html">
+            
+                    
+                    汇流成河
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >ex7: tuple</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ex7-tuple">ex7: tuple</h1>
+<p>ex5 &#x4E2D;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;ex7 &#x4E2D;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x89C1;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x5143;&#x7EC4;&#xFF08;tuple&#xFF09;</p>
+<p>&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7EC4;&#x5408;&#x800C;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x5404;&#x81EA;&#x7684;&#x7279;&#x70B9;&#x3002;&#x5143;&#x7EC4;&#x7684;&#x57FA;&#x672C;&#x6837;&#x5B50;&#x662F;&#x7531;&#x5C0F;&#x62EC;&#x53F7;&#x548C;&#x9017;&#x53F7;&#x7EC4;&#x5408;&#x6210;&#x7684;&#x4E00;&#x7EC4;&#x5143;&#x7D20;&#xFF1A;<code>(1u8,1.0f64, true, &apos;a&apos;)</code>&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5143;&#x7D20;&#x79CD;&#x7C7B;&#x4E0D;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5143;&#x7EC4;&#x7684;&#x5D4C;&#x5957;&#x3002;</p>
+<p>&#x5143;&#x7EC4;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x82E5;&#x5E72;&#x4E2A;&#x6570;&#x91CF;&#x4E00;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5176;&#x957F;&#x5EA6;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#xFF0C;&#x4F46;&#x662F;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x7684;&#x7EC6;&#x8282;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x4EE3;&#x7801;&#x8BF4;&#x660E;</p>
+<h2 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h2>
+<pre><code class="lang-rust"><span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-comment">// &#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x548C;&#x9017;&#x53F7;&#x521B;&#x5EFA;&#x5143;&#x7EC4;</span>
+    <span class="hljs-comment">// &#x5143;&#x7EC4;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#x7C7B;&#x578B;</span>
+    <span class="hljs-keyword">let</span> mix_tuple = (<span class="hljs-number">1u8</span>, <span class="hljs-number">2u16</span>, <span class="hljs-number">3u32</span>, <span class="hljs-number">4u64</span>,
+        -<span class="hljs-number">1i8</span>, -<span class="hljs-number">2i16</span>, -<span class="hljs-number">3i32</span>, -<span class="hljs-number">4i64</span>,
+        <span class="hljs-number">0.1f32</span>, <span class="hljs-number">0.2f64</span>,
+        <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">&quot;Hello&quot;</span>, (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>));
+
+    <span class="hljs-keyword">let</span> vector: (<span class="hljs-keyword">i32</span>, <span class="hljs-keyword">i32</span>) = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">// &#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x6807;&#x6CE8;&#x5143;&#x7EC4;&#x7684;&#x7C7B;&#x578B;</span>
+    <span class="hljs-comment">// &#x8BBF;&#x95EE;&#x5143;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5143;&#x7EC4;&#x7D22;&#x5F15;</span>
+    <span class="hljs-comment">// &#x4ECE;&#x96F6;&#x5F00;&#x59CB;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x: {}, y: {}&quot;</span>, vector.<span class="hljs-number">0</span>, vector.<span class="hljs-number">1</span>);
+
+    <span class="hljs-comment">// #1</span>
+    <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x4F7F;&#x7528; let &#x5C06;&#x5143;&#x7EC4;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x9010;&#x4E2A;&#x8D4B;&#x503C;&#x7ED9;&#x522B;&#x7684;&#x53D8;&#x91CF;</span>
+    <span class="hljs-keyword">let</span> (x, y) = vector;
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;x: {}, y: {}&quot;</span>, x, y);
+    <span class="hljs-keyword">let</span> (first, .., hello, last) = mix_tuple;
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;first: {}, hello: {}&quot;</span>, first, hello);
+
+
+    <span class="hljs-comment">// #2</span>
+    <span class="hljs-comment">// &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5E2E;&#x4F60;&#x6CE8;&#x91CA;&#x6389;&#x4E86;</span>
+    <span class="hljs-comment">// println!(&quot;short tuple {}&quot;, vector);</span>
+    <span class="hljs-comment">// &#x5143;&#x7EC4;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#xFF0C;&#x4F46;&#x662F;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;short tuple {:?}&quot;</span>, vector);
+    <span class="hljs-comment">// &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5E2E;&#x4F60;&#x6CE8;&#x91CA;&#x6389;&#x4E86;</span>
+    <span class="hljs-comment">// println!(&quot;too long tuple {:?}&quot;, mix_tuple);</span>
+
+    <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5143;&#x7EC4;</span>
+    <span class="hljs-comment">// &#x4E0D;&#x8FC7;&#x6CE8;&#x610F;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x9017;&#x53F7;</span>
+    <span class="hljs-comment">// &#x5426;&#x5219;&#x4F1A;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F; #3</span>
+    <span class="hljs-keyword">let</span> single_integer: <span class="hljs-keyword">i32</span> = (<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">let</span> single_tuple: (<span class="hljs-keyword">i32</span>,) = (<span class="hljs-number">1</span>,);
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;integer: {}&quot;</span>, single_integer);
+    <span class="hljs-comment">// !error! &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF01;</span>
+    <span class="hljs-comment">// &#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#xFF0C;&#x8BF4;&#x660E;&#x5176;&#x7C7B;&#x578B;&#x4E3A;&#x6574;&#x578B;</span>
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;single_tuple: {}&quot;</span>, single_tuple);
+
+    <span class="hljs-comment">// !error! &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF01;</span>
+    <span class="hljs-comment">// &#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x7684; vector &#x53D8;&#x91CF;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF08;&#x4E4B;&#x540E;&#x4F1A;&#x8BF4;&#x660E;&#xFF09;</span>
+    vector.<span class="hljs-number">1</span> = <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> mut_vector = (<span class="hljs-number">1</span>, <span class="hljs-number">2i32</span>); <span class="hljs-comment">// &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684; vector</span>
+    mut_vector.<span class="hljs-number">0</span> = <span class="hljs-number">1</span>;
+    <span class="hljs-comment">// !error! &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF01;</span>
+    <span class="hljs-comment">// &#x867D;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x5143;&#x7EC4;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x5B83;&#x7684;&#x7C7B;&#x578B; #4</span>
+    mut_vector.<span class="hljs-number">1</span> = <span class="hljs-number">1.0</span>;
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;mut_vector: {:?}&quot;</span>, mut_vector);
+}
+</code></pre>
+<h2 id="&#x4EE3;&#x7801;&#x8BF4;&#x660E;">&#x4EE3;&#x7801;&#x8BF4;&#x660E;</h2>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;<code>#num</code>&#x7684;&#x65B9;&#x6CD5;&#x6807;&#x6CE8;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#x90E8;&#x5206;</p>
+<h3 id="1">#1</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x628A;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x62C6;&#x5206;&#x6210;&#x51E0;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x503C;&#x5206;&#x522B;&#x8D4B;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x5143;&#x7EC4;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x6240;&#x6709;&#x6743;&#xFF0C;&#x5B83;&#x4EEC;&#x4EC5;&#x4EC5;&#x662F;&#x590D;&#x5236;&#x4E86;&#x4E00;&#x4EFD;&#x65B0;&#x7684;&#x6570;&#x636E;&#x3002;&#xFF08;&#x6709;&#x5173;&#x6240;&#x6709;&#x6743;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#xFF09;</p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>..</code>&#x4F5C;&#x4E3A;&#x5360;&#x4F4D;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x503C;&#x7684;&#x5206;&#x914D;</p>
+<h3 id="2">#2</h3>
+<p>&#x81F3;&#x4E8E;&#x6253;&#x5370;&#x7684;&#x65F6;&#x5019;<code>{:?}</code>&#x662F;&#x4EC0;&#x4E48;&#x542B;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728; ex11 &#x4E2D;&#x8BE6;&#x7EC6;&#x5730;&#x8BF4;&#x660E;&#x3002;&#x76EE;&#x524D;&#x4F60;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x53EA;&#x6709;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;<code>{}</code>&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#x8F93;&#x51FA;&#xFF0C;&#x800C; tuple &#x662F;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8F93;&#x51FA;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x8F93;&#x51FA;&#x5FC5;&#x987B;&#x4F7F;&#x7528;<code>{:?}</code>&#x6307;&#x5B9A;&#x8FDB;&#x884C; Debug &#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5F53;&#x5143;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x8FBE;&#x5230; 13 &#x7684;&#x65F6;&#x5019;&#xFF0C;Debug &#x8F93;&#x51FA;&#x4E5F;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x3002;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x6070;&#x597D;&#x662F; 13 &#xFF0C;&#x8BF4;&#x4E0D;&#x5B9A;&#x662F;&#x56E0;&#x4E3A;&#x6570;&#x5B57;&#x4E0D;&#x591F;&#x5409;&#x5229;&#x5427;&#x3002;</p>
+<h3 id="3">#3</h3>
+<p>&#x4E0D;&#x80FD;&#x4F7F;&#x7528;<code>(1)</code>&#x6307;&#x5B9A;&#x5143;&#x7EC4;&#x7684;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x5668;&#x8BA4;&#x4E3A;&#x4F60;&#x60F3;&#x8981;&#x8868;&#x8FBE;&#x7684;&#x662F;&#x6570;&#x5B66;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x5C0F;&#x62EC;&#x53F7;&#x7684;&#x6570;&#x5B57;&#x4E00;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x7F16;&#x8BD1;&#x5668;&#x53D1;&#x751F;&#x6B67;&#x4E49;&#xFF0C;&#x6240;&#x4EE5;&#x89C4;&#x5B9A;&#x4E86;&#x5143;&#x7EC4;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x624D;&#x80FD;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x5143;&#x7EC4;&#xFF08;&#x56E0;&#x4E3A;&#x6570;&#x5B66;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x9017;&#x53F7;&#xFF09;&#x3002;</p>
+<h3 id="4">#4</h3>
+<p>&#x4F60;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> mut_vector = (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+mut_vector.<span class="hljs-number">0</span> = <span class="hljs-number">128u32</span>;
+</code></pre>
+<p>&#x8FD9;&#x4E0D;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#x3002;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x4F60;&#x4FEE;&#x6539;&#x4E86;&#x5143;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x9879;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x5668;&#x63A8;&#x65AD;&#x51FA;&#x4F60;&#x5143;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x50A8;&#x5B58;&#x7684;&#x7C7B;&#x578B;&#x5B9E;&#x9645;&#x4E0A;&#x662F;u32&#xFF0C;&#x4F60;&#x5E76;&#x4E0D;&#x80FD;&#x5728;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;&#x4E2D;&#x4FEE;&#x6539;&#x5B83;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x672C;&#x8282;&#x603B;&#x7ED3;">&#x672C;&#x8282;&#x603B;&#x7ED3;</h2>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86;&#x7B2C;&#x4E00;&#x79CD;&#x590D;&#x5408;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;tuple&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x578B;&#x7684;&#x4F7F;&#x7528;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x6280;&#x5DE7;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x8F83;&#x4E3A;&#x719F;&#x7EC3;&#x5730;&#x638C;&#x63E1;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4F1A;&#x5728;&#x672A;&#x6765;&#x7684;<code>struct</code>&#x3001;<code>enum</code>&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x628A; tuple &#x7684;&#x57FA;&#x7840;&#x7528;&#x6CD5;&#x5F04;&#x719F;&#x7EC3;&#x4E86;&#x662F;&#x4E00;&#x4EF6;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x5BF9;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x6240;&#x638C;&#x63E1;&#xFF1A;</p>
+<ol>
+<li>&#x5143;&#x7EC4;(tuple)&#x7684;&#x521B;&#x5EFA;&#x3001;&#x5143;&#x7D20;&#x8BBF;&#x95EE;&#x3001;&#x89E3;&#x6784;&#x3001;&#x6253;&#x5370;</li>
+</ol>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x5BF9;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x6240;&#x4E86;&#x89E3;&#xFF1A;</p>
+<ol>
+<li>&#x5143;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x56FA;&#x5B9A;&#x7684;</li>
+<li>&#x5143;&#x7EC4;&#x7684;&#x6253;&#x5370;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>{:?}</code></li>
+<li>&#x4F7F;&#x7528;<code>mut</code>&#x6807;&#x6CE8;&#x7684;&#x5143;&#x7EC4;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</li>
+</ol>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p><a href="https://doc.rust-lang.org/rust-by-example/primitives/tuples.html" target="_blank">Rust By Example: Tuples</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ex6/ex6.html" class="navigation navigation-prev " aria-label="Previous page: ex6: 字面量 (Literals)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ex8/ex8.html" class="navigation navigation-next " aria-label="Next page: ex8: array 与 slice">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ex7: tuple","level":"6.3","depth":1,"next":{"title":"ex8: array 与 slice","level":"6.4","depth":1,"path":"codes/ex8/ex8.md","ref":"codes/ex8/ex8.md","articles":[]},"previous":{"title":"ex6: 字面量 (Literals)","level":"6.2","depth":1,"path":"codes/ex6/ex6.md","ref":"codes/ex6/ex6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"codes/ex7/ex7.md","mtime":"2020-11-03T06:12:06.394Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-03T06:12:50.527Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
